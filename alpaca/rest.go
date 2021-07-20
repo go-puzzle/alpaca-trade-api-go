@@ -1298,7 +1298,7 @@ func (req PlaceOrderRequest) MarshalJSON() ([]byte, error) {
 	if err = json.Unmarshal(buf, &data); err != nil {
 		return nil, err
 	}
-
+	/*
 	// remove zero-value struct fields related to order size
 	if req.Notional.IsZero() {
 		delete(data, "notional")
@@ -1306,6 +1306,6 @@ func (req PlaceOrderRequest) MarshalJSON() ([]byte, error) {
 	if req.Qty.IsZero() {
 		delete(data, "qty")
 	}
-
+	*/
 	return json.Marshal(data)
 }
